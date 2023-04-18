@@ -18,7 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/adaptive-styles.css" />
   </head>
   <body>
     <!-- Шапка сторінки -->
@@ -38,6 +38,11 @@
             </li>
             <li class="item"><a href="" class="link">Contacts</a></li>
           </ul>
+          <button type="button" class="btn-menu-mobile js-open-menu">
+            <svg width="32" height="32" class="menu-mobile-icon">
+              <use href="./images/icons.svg#menu-mobile"></use>
+            </svg>
+          </button>
         </nav>
 
         <address class="contacts">
@@ -52,6 +57,70 @@
             </li>
           </ul>
         </address>
+        <div class="mobile-container">
+          <div class="mobile-menu js-menu-container">
+            <button type="button" class="mobile-close js-close-menu">
+              <svg width="8" height="8" class="mobile-close-icon">
+                <use href="./images/icons.svg#close-modal"></use>
+              </svg>
+            </button>
+            <ul class="mobile-nav-list list">
+              <li class="item">
+                <a href="./index.html" class="link">Studio</a>
+              </li>
+              <li class="item">
+                <a href="./portfolio.html" class="link">Portfolio</a>
+              </li>
+              <li class="item">
+                <a href="" class="mobil-activ link">Contacts</a>
+              </li>
+            </ul>
+            <address class="mobile-contacts">
+              <ul class="mobile-contacts-list list">
+                <li class="item">
+                  <a href="tel:+110001111111" class="phone-link link"
+                    >+11 (000) 111-11-11</a
+                  >
+                </li>
+                <li class="item">
+                  <a href="mailto:info@devstudio.com" class="mail-link link"
+                    >info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <ul class="mobile-media-list list">
+              <li>
+                <a href="" class="footer-media-link link">
+                  <svg class="footer-icon">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" class="footer-media-link link">
+                  <svg class="footer-icon">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" class="footer-media-link link">
+                  <svg class="footer-icon">
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" class="footer-media-link link">
+                  <svg class="footer-icon">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -70,7 +139,7 @@
         <div class="container">
           <h2 class="visually-hidden">Features</h2>
           <ul class="features-list list">
-            <li class="item">
+            <li class="features-list-item item">
               <svg class="features-icon">
                 <use href="./images/icons.svg#antenna"></use>
               </svg>
@@ -80,7 +149,7 @@
                 the perfect and creative solution.
               </p>
             </li>
-            <li class="item">
+            <li class="features-list-item item">
               <svg class="features-icon">
                 <use href="./images/icons.svg#clock"></use>
               </svg>
@@ -90,7 +159,7 @@
                 within the shortest possible time.
               </p>
             </li>
-            <li class="item">
+            <li class="features-list-item item">
               <svg class="features-icon">
                 <use href="./images/icons.svg#diagram"></use>
               </svg>
@@ -100,7 +169,7 @@
                 growth opportunities and minimize risk.
               </p>
             </li>
-            <li class="item">
+            <li class="features-list-item item">
               <svg class="features-icon">
                 <use href="./images/icons.svg#astronaut"></use>
               </svg>
@@ -149,6 +218,7 @@
           <ul class="team-list list">
             <li class="team-list-item">
               <img
+                srcset="./images/mark.jpg 1x, ./images/mark2x.jpg 2x"
                 src="./images/mark.jpg"
                 alt="Employee"
                 width="264"
@@ -191,6 +261,7 @@
             </li>
             <li class="team-list-item">
               <img
+                srcset="./images/tom.jpg 1x, ./images/tom2x.jpg 2x"
                 src="./images/tom.jpg"
                 alt="Employee"
                 width="264"
@@ -233,6 +304,7 @@
             </li>
             <li class="team-list-item">
               <img
+                srcset="./images/camila.jpg 1x, ./images/camila2x.jpg 2x"
                 src="./images/camila.jpg"
                 alt="Employee"
                 width="264"
@@ -275,6 +347,7 @@
             </li>
             <li class="team-list-item">
               <img
+                srcset="./images/daniel.jpg 1x, ./images/daniel2x.jpg 2x"
                 src="./images/daniel.jpg"
                 alt="Employee"
                 width="264"
@@ -419,12 +492,13 @@
           <h2 class="media-title subscribe-title">Subscribe</h2>
           <form class="form-subscribe">
             <input type="email" placeholder="E-mail" class="footer-mail" />
-            <button type="submit" class="footer-btn">Subscribe</button>
-            <span>
-              <svg class="subscribe-icon">
-                <use href="./images/icons.svg#Subscribe"></use>
-              </svg>
-            </span>
+            <button type="submit" class="footer-btn">
+              Subscribe<span class="subscribe-icon-wrap">
+                <svg class="subscribe-icon">
+                  <use href="./images/icons.svg#Subscribe"></use>
+                </svg>
+              </span>
+            </button>
           </form>
         </div>
       </div>
@@ -493,5 +567,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
