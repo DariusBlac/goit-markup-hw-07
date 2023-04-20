@@ -994,3 +994,40 @@ textarea {
   letter-spacing: 0.04em;
   color: rgba(255, 255, 255, 0.3);
 }
+
+@media screen and (min-width: 768px) {
+  .footer-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    column-gap: 24px;
+  }
+
+  .footer-logo {
+    margin: 0;
+    width: 264px;
+  }
+
+  .footer-media {
+    margin: 0;
+  }
+
+  .footer-logo .logo {
+    padding: 0;
+    text-align: start;
+  }
+
+  .media-title {
+    text-align: start;
+  }
+
+  .form-subscribe {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-mail {
+    margin: 0;
+    width: 264px;
+  }
+}
