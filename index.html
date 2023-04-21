@@ -38,7 +38,12 @@
             </li>
             <li class="item"><a href="" class="link">Contacts</a></li>
           </ul>
-          <button type="button" class="btn-menu-mobile js-open-menu">
+          <button
+            type="button"
+            class="btn-menu-mobile js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
             <svg width="32" height="32" class="menu-mobile-icon">
               <use href="./images/icons.svg#menu-mobile"></use>
             </svg>
@@ -57,38 +62,40 @@
             </li>
           </ul>
         </address>
-        <div class="mobile-container">
-          <div class="mobile-menu js-menu-container">
+        <div class="mobile-container js-menu-container" id="mobile-menu">
+          <div class="mobil-menu">
             <button type="button" class="mobile-close js-close-menu">
               <svg width="8" height="8" class="mobile-close-icon">
                 <use href="./images/icons.svg#close-modal"></use>
               </svg>
             </button>
-            <ul class="mobile-nav-list list">
-              <li class="item">
-                <a href="./index.html" class="link">Studio</a>
-              </li>
-              <li class="item">
-                <a href="./portfolio.html" class="link">Portfolio</a>
-              </li>
-              <li class="item">
-                <a href="" class="mobil-activ link">Contacts</a>
-              </li>
-            </ul>
-            <address class="mobile-contacts">
-              <ul class="mobile-contacts-list list">
+            <div class="mobil-wrap">
+              <ul class="mobile-nav-list list">
                 <li class="item">
-                  <a href="tel:+110001111111" class="phone-link link"
-                    >+11 (000) 111-11-11</a
-                  >
+                  <a href="./index.html" class="link">Studio</a>
                 </li>
                 <li class="item">
-                  <a href="mailto:info@devstudio.com" class="mail-link link"
-                    >info@devstudio.com</a
-                  >
+                  <a href="./portfolio.html" class="link">Portfolio</a>
+                </li>
+                <li class="item">
+                  <a href="" class="mobil-activ link">Contacts</a>
                 </li>
               </ul>
-            </address>
+              <address class="mobile-contacts">
+                <ul class="mobile-contacts-list list">
+                  <li class="item">
+                    <a href="tel:+110001111111" class="phone-link link"
+                      >+11 (000) 111-11-11</a
+                    >
+                  </li>
+                  <li class="item">
+                    <a href="mailto:info@devstudio.com" class="mail-link link"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
             <ul class="mobile-media-list list">
               <li>
                 <a href="" class="footer-media-link link">
@@ -189,10 +196,17 @@
           <h2 class="section-title">What are we doing</h2>
           <ul class="our-specialty-list list">
             <li class="item">
-              <img src="./images/img-pc.jpg" alt="pc" width="360" class="img" />
+              <img
+                srcset="./images/img-pc2x.jpg 2x"
+                src="./images/img-pc.jpg"
+                alt="pc"
+                width="360"
+                class="img"
+              />
             </li>
             <li class="item">
               <img
+                srcset="./images/img-phone2x.jpg 2x"
                 src="./images/img-phone.jpg"
                 alt="phone"
                 width="360"
@@ -201,6 +215,7 @@
             </li>
             <li class="item">
               <img
+                srcset="./images/img-notebook2x.jpg 2x"
                 src="./images/img-notebook.jpg"
                 alt="notebook"
                 width="360"
@@ -218,7 +233,7 @@
           <ul class="team-list list">
             <li class="team-list-item">
               <img
-                srcset="./images/mark.jpg 1x, ./images/mark2x.jpg 2x"
+                srcset="./images/mark2x.jpg 2x"
                 src="./images/mark.jpg"
                 alt="Employee"
                 width="264"
@@ -261,7 +276,7 @@
             </li>
             <li class="team-list-item">
               <img
-                srcset="./images/tom.jpg 1x, ./images/tom2x.jpg 2x"
+                srcset="./images/tom2x.jpg 2x"
                 src="./images/tom.jpg"
                 alt="Employee"
                 width="264"
@@ -304,7 +319,7 @@
             </li>
             <li class="team-list-item">
               <img
-                srcset="./images/camila.jpg 1x, ./images/camila2x.jpg 2x"
+                srcset="./images/camila2x.jpg 2x"
                 src="./images/camila.jpg"
                 alt="Employee"
                 width="264"
@@ -347,7 +362,7 @@
             </li>
             <li class="team-list-item">
               <img
-                srcset="./images/daniel.jpg 1x, ./images/daniel2x.jpg 2x"
+                srcset="./images/daniel2x.jpg 2x"
                 src="./images/daniel.jpg"
                 alt="Employee"
                 width="264"
@@ -567,6 +582,12 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
