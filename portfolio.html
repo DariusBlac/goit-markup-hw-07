@@ -18,7 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/adptive-styles-portfolio.css" />
   </head>
   <body>
     <!-- Шапка сторінки -->
@@ -30,12 +30,24 @@
           >
 
           <ul class="nav-list list">
-            <li class="item"><a href="./index.html" class="link">Studio</a></li>
+            <li class="item">
+              <a href="./index.html" class="link">Studio</a>
+            </li>
             <li class="item">
               <a href="./portfolio.html" class="link activ">Portfolio</a>
             </li>
             <li class="item"><a href="" class="link">Contacts</a></li>
           </ul>
+          <button
+            type="button"
+            class="btn-menu-mobile js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="menu-mobile-icon">
+              <use href="./images/icons.svg#menu-mobile"></use>
+            </svg>
+          </button>
         </nav>
 
         <address class="contacts">
@@ -50,6 +62,74 @@
             </li>
           </ul>
         </address>
+        <div class="mobile-container js-menu-container" id="mobile-menu">
+          <div class="mobil-menu">
+            <button type="button" class="mobile-close js-close-menu">
+              <svg width="8" height="8" class="mobile-close-icon">
+                <use href="./images/icons.svg#close-modal"></use>
+              </svg>
+            </button>
+            <div class="mobil-wrap">
+              <ul class="mobile-nav-list list">
+                <li class="item">
+                  <a href="./index.html" class="link">Studio</a>
+                </li>
+                <li class="item">
+                  <a href="./portfolio.html" class="mobil-activ link"
+                    >Portfolio</a
+                  >
+                </li>
+                <li class="item">
+                  <a href="" class="link">Contacts</a>
+                </li>
+              </ul>
+              <address class="mobile-contacts">
+                <ul class="mobile-contacts-list list">
+                  <li class="item">
+                    <a href="tel:+110001111111" class="phone-link link"
+                      >+11 (000) 111-11-11</a
+                    >
+                  </li>
+                  <li class="item">
+                    <a href="mailto:info@devstudio.com" class="mail-link link"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </div>
+            <ul class="mobile-media-list list">
+              <li>
+                <a href="" class="footer-media-link link">
+                  <svg class="footer-icon">
+                    <use href="./images/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" class="footer-media-link link">
+                  <svg class="footer-icon">
+                    <use href="./images/icons.svg#twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" class="footer-media-link link">
+                  <svg class="footer-icon">
+                    <use href="./images/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="" class="footer-media-link link">
+                  <svg class="footer-icon">
+                    <use href="./images/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <!-- Main content -->
@@ -78,12 +158,33 @@
             <li class="portfolio-card">
               <a href="" class="link link-card">
                 <div class="overlay-pin">
-                  <img
-                    src="./images/img-8.jpg"
-                    alt="Picture of the project"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-desktop-img-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-desktop-img2x-min.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-tab-img-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-tab-img2x-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-mobil-img-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-mobil-img2x-min.jpg 2x
+                      "
+                      media="(min-width: 300px)"
+                    />
+                    <img
+                      src="./images/portfolio-images/portfolio-mobil-img-min.jpg"
+                      alt="Picture of the project"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay-tex">
                       Lorem ipsum dolor sit, amet consectetur adipisicing elit.
@@ -102,12 +203,33 @@
             <li class="portfolio-card">
               <a href="" class="link link-card">
                 <div class="overlay-pin">
-                  <img
-                    src="./images/img-7.jpg"
-                    alt="Picture of the project"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-desktop-img-1-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-desktop-img2x-1-min.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-tab-img-1-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-tab-img2x-1-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-mobil-img-1-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-mobil-img2x-1-min.jpg 2x
+                      "
+                      media="(min-width: 300px)"
+                    />
+                    <img
+                      src="./images/portfolio-images/portfolio-mobil-img-1-min.jpg"
+                      alt="Picture of the project"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay-tex">
                       14 Stylish and User-Friendly App Design Concepts · Task
@@ -125,12 +247,33 @@
             <li class="portfolio-card">
               <a href="" class="link link-card">
                 <div class="overlay-pin">
-                  <img
-                    src="./images/img-6.jpg"
-                    alt="Picture of the project"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-desktop-img-2-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-desktop-img2x-2-min.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-tab-img-2-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-tab-img2x-2-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-mobil-img-2-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-mobil-img2x-2-min.jpg 2x
+                      "
+                      media="(min-width: 300px)"
+                    />
+                    <img
+                      src="./images/portfolio-images/portfolio-mobil-img-2-min.jpg"
+                      alt="Picture of the project"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay-tex">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -149,12 +292,33 @@
             <li class="portfolio-card">
               <a href="" class="link link-card">
                 <div class="overlay-pin">
-                  <img
-                    src="./images/img-5.jpg"
-                    alt="Picture of the project"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-desktop-img-3-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-desktop-img2x-3-min.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-tab-img-3-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-tab-img2x-3-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-mobil-img-3-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-mobil-img2x-3-min.jpg 2x
+                      "
+                      media="(min-width: 300px)"
+                    />
+                    <img
+                      src="./images/portfolio-images/portfolio-mobil-img-3-min.jpg"
+                      alt="Picture of the project"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay-tex">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -173,12 +337,33 @@
             <li class="portfolio-card">
               <a href="" class="link link-card">
                 <div class="overlay-pin">
-                  <img
-                    src="./images/img-4.jpg"
-                    alt="Picture of the project"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-desktop-img-4-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-desktop-img2x-4-min.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-tab-img-4-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-tab-img2x-4-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-mobil-img-4-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-mobil-img2x-4-min.jpg 2x
+                      "
+                      media="(min-width: 300px)"
+                    />
+                    <img
+                      src="./images/portfolio-images/portfolio-mobil-img-4-min.jpg"
+                      alt="Picture of the project"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay-tex">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -197,12 +382,33 @@
             <li class="portfolio-card">
               <a href="" class="link link-card">
                 <div class="overlay-pin">
-                  <img
-                    src="./images/img-3.jpg"
-                    alt="Picture of the project"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-desktop-img-5-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-desktop-img2x-5-min.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-tab-img-5-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-tab-img2x-5-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-mobil-img-5-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-mobil-img2x-5-min.jpg 2x
+                      "
+                      media="(min-width: 300px)"
+                    />
+                    <img
+                      src="./images/portfolio-images/portfolio-mobil-img-5-min.jpg"
+                      alt="Picture of the project"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay-tex">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -221,12 +427,33 @@
             <li class="portfolio-card">
               <a href="" class="link link-card">
                 <div class="overlay-pin">
-                  <img
-                    src="./images/img-2.jpg"
-                    alt="Picture of the project"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-desktop-img-6-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-desktop-img2x-6-min.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-tab-img-6-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-tab-img2x-6-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-mobil-img-6-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-mobil-img2x-6-min.jpg 2x
+                      "
+                      media="(min-width: 300px)"
+                    />
+                    <img
+                      src="./images/portfolio-images/portfolio-mobil-img-6-min.jpg"
+                      alt="Picture of the project"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay-tex">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -245,12 +472,33 @@
             <li class="portfolio-card">
               <a href="" class="link link-card">
                 <div class="overlay-pin">
-                  <img
-                    src="./images/img-1.jpg"
-                    alt="Picture of the project"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-desktop-img-7-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-desktop-img2x-7-min.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-tab-img-7-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-tab-img2x-7-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-mobil-img-7-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-mobil-img2x-7-min.jpg 2x
+                      "
+                      media="(min-width: 300px)"
+                    />
+                    <img
+                      src="./images/portfolio-images/portfolio-mobil-img-7-min.jpg"
+                      alt="Picture of the project"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay-tex">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -269,12 +517,33 @@
             <li class="portfolio-card">
               <a href="" class="link link-card">
                 <div class="overlay-pin">
-                  <img
-                    src="./images/img.jpg"
-                    alt="Picture of the project"
-                    width="360"
-                    height="300"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-desktop-img-8-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-desktop-img2x-8-min.jpg 2x
+                      "
+                      media="(min-width: 1158px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-tab-img-8-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-tab-img2x-8-min.jpg 2x
+                      "
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio-images/portfolio-mobil-img-8-min.jpg   1x,
+                        ./images/portfolio-images/portfolio-mobil-img2x-8-min.jpg 2x
+                      "
+                      media="(min-width: 300px)"
+                    />
+                    <img
+                      src="./images/portfolio-images/portfolio-mobil-img-8-min.jpg"
+                      alt="Picture of the project"
+                    />
+                  </picture>
                   <div class="overlay">
                     <p class="overlay-tex">
                       Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -343,15 +612,24 @@
           <h2 class="media-title subscribe-title">Subscribe</h2>
           <form class="form-subscribe">
             <input type="email" placeholder="E-mail" class="footer-mail" />
-            <button type="submit" class="footer-btn">Subscribe</button>
-            <span>
-              <svg class="subscribe-icon">
-                <use href="./images/icons.svg#Subscribe"></use>
-              </svg>
-            </span>
+            <button type="submit" class="footer-btn">
+              Subscribe<span class="subscribe-icon-wrap">
+                <svg class="subscribe-icon">
+                  <use href="./images/icons.svg#Subscribe"></use>
+                </svg>
+              </span>
+            </button>
           </form>
         </div>
       </div>
     </footer>
+
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
